@@ -16,9 +16,6 @@ function Navbar() {
               Home
             </Button>
           </Link>
-          <Button onClick={toggleColorMode} size={"sm"}>
-            Toggle {useColorModeValue("Dark", "Light")}
-          </Button>
         </Flex>
       </Flex>
     </Box>

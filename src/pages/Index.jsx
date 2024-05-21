@@ -10,7 +10,6 @@ const Index = () => {
 
   return (
     <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center" bg={bg} color={color} p={4}>
-      <IconButton aria-label="Toggle dark mode" icon={colorMode === "light" ? <FaMoon /> : <FaSun />} onClick={toggleColorMode} alignSelf="flex-end" m={4} />
       <VStack spacing={8} width="100%" as={motion.div} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
         <Box textAlign="center" as={motion.div} whileHover={{ scale: 1.05 }}>
           <Text fontSize="4xl" fontWeight="bold">
