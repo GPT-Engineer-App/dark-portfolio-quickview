@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Container, VStack, Text, Box, IconButton, useColorMode, useColorModeValue, HStack, Link } from "@chakra-ui/react";
+import { Container, VStack, Text, Box, IconButton, useColorMode, useColorModeValue, HStack, Link, Button } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { FaSun, FaMoon, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
@@ -60,19 +60,9 @@ const Index = () => {
           </HStack>
         </Box>
         <Box textAlign="center" as={motion.div} whileHover={{ scale: 1.05 }}>
-          <Text fontSize="2xl" fontWeight="bold">
-            Quick View of Resume
-          </Text>
-          <Box borderWidth="1px" borderRadius="lg" overflow="hidden" width="100%" p={4}>
-            <Text fontSize="xl" fontWeight="bold">
-              John Doe
-            </Text>
-            <Text>Full Stack Developer with 5+ years of experience in web development.</Text>
-            <Text>Skills: React, Node.js, Express, MongoDB, GraphQL</Text>
-            <Link href="https://images.unsplash.com/photo-1525909002-1b05e0c869d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxzYW1wbGUlMjB3ZWJzaXRlfGVufDB8fHx8MTcxNjMyMDQzMHww&ixlib=rb-4.0.3&q=80&w=1080" isExternal color="teal.500">
-              View Sample Website
-            </Link>
-          </Box>
+          <Button as={Link} href="/path/to/resume.pdf" isExternal colorScheme="teal" size="lg">
+            Download Resume
+          </Button>
         </Box>
       </VStack>
     </Container>
