@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { Box, Flex, Button, useColorMode, useColorModeValue } from "@chakra-ui/react";
+import { FaSun, FaMoon } from "react-icons/fa";
 
 function Navbar() {
-  const { toggleColorMode } = useColorMode();
+  const { colorMode, toggleColorMode } = useColorMode();
   const bg = useColorModeValue("white", "gray.800");
   const color = useColorModeValue("gray.800", "white");
 
@@ -16,6 +17,9 @@ function Navbar() {
               Home
             </Button>
           </Link>
+          <Button onClick={toggleColorMode} variant={"solid"} colorScheme={"teal"} size={"sm"}>
+            {colorMode === "light" ? <FaMoon /> : <FaSun />}
+          </Button>
         </Flex>
       </Flex>
     </Box>
